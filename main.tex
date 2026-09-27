@@ -1,0 +1,140 @@
+\documentclass[10pt,leqno,twoside]{article}
+
+% Custom journal/conference class (defines \fofej, page layout, etc.)
+\usepackage{annal-latex}
+
+% Math
+\usepackage{amsmath}
+
+% Graphics & figures
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs}  % \toprule / \midrule / \bottomrule used in the Results table
+
+% Watermark & color (for draft marking)
+\usepackage{draftwatermark}
+\usepackage{color}
+
+% Bibliography
+\usepackage[backend=bibtex, sortcites=true, style=numeric-comp]{biblatex}
+\addbibresource{second.bib}
+
+% Author formatting
+\usepackage{authblk}
+
+\SetWatermarkText{\textbf{FAKE RESEARCH}}
+\SetWatermarkLightness{0.85}
+\SetWatermarkAngle{60}
+\SetWatermarkScale{3.0}
+
+% Reusable author/affiliation block for the closing page, to avoid
+% repeating the same 6 lines four times with copy-paste risk.
+\newcommand{\authorblock}[2]{%
+  \noindent\textbf{#1}\\
+  Department of Computer Science\\Eötvös Loránd University\\
+  Pázmány Péter Sétány 1/C Budapest, Hungary\\
+  Budapest\\
+  Hungary\\
+  {\tt #2}\\
+  \\
+}
+
+\begin{document}
+\setcounter{page}{1}
+
+% \fofej{volume}{issue}{start-page-code}{end-page-code}
+\fofej{49}{19}{nn}{nnn}
+
+\vspace{.4cm}
+
+% ---------------------------------------------------------------
+
+\title{The Not For You Page:\\Agorithmic Design for User Disengagement}
+
+\author{%
+  {\bf Fodor Máté} (Budapest, Hungary)\\[1ex]
+  {\bf Merk Eszter} (Budapest, Hungary)\\
+  {\bf Vidó Bence} (Budapest, Hungary)\\
+  {\bf Preszter Balázs} (Budapest, Hungary)%
+}
+
+\date{September 2026}
+
+% ---------------------------------------------------------------
+
+
+\abstract{Algorithmic recommendation systems across modern digital platforms are predominantly engineered to maximize user engagement, retention, and time on platform. While effective for commercial metrics, these continuous feed architectures frequently lead to digital fatigue, compulsive consumption, and diminished user agency. This paper explores the concept of the ``Not For You Page'' (NFYP), an alternative feed model designed to investigate how recommendation systems can be re-oriented toward disengagement and user well-being. By examining mechanisms that introduce intentional friction and alter content distribution, this research evaluates how algorithmic design can encourage voluntary platform exit. The project addresses the feasibility of embedding digital well-being directly into recommendation logic, offering a counter perspective to traditional retention focused platform architectures.}
+
+% ---------------------------------------------------------------
+
+\section{Introduction}
+Feed-based recommendation engines serve as the foundational interface for modern content discovery. Driven by retention metrics, these architectures continuously adapt to user behavior to capture and sustain attention. However, the systematic optimization of screen time increasingly conflicts with user autonomy, giving rise to digital burnout and cognitive overload. Current interventions for digital well-being rely almost exclusively on external controls, such as application timers or system level access restrictions, leaving the underlying algorithms largely unexamined as tools for self-regulation.
+
+To address this issue, this project examines the ``Not For You Page'' (NFYP), a conceptual recommendation model that inverts conventional retention objectives. Rather than reinforcing engagement loops, the system explores methods to systematically reduce content resonance and introduce friction as usage continues. This research investigates the theoretical foundation of anti-retention algorithm design, outlining potential mechanisms for disengagement and discussing their broader implications for human-computer interaction and ethical platform development.
+
+% ---------------------------------------------------------------
+
+\subsection{Related work}
+Works related to your paper
+
+% ---------------------------------------------------------------
+
+\section{Methodology}
+
+\subsection{Methodology subsection}
+Your methodology
+
+% ---------------------------------------------------------------
+
+
+\section{Results}
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrr}
+\toprule
+A & B & C \\
+\midrule
+A1 & B1 & C1\\
+A2 & B2 & C2\\
+A3 & B3 & C3\\
+A4 & B4 & C4\\
+\bottomrule
+\end{tabular}
+\caption{\label{tab:train}The summary of the table}
+\end{table}
+
+Reference to the Table \ref{tab:train} on page \pageref{tab:train} and a cite \cite{reversing}.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\linewidth]{dog}
+%     \caption{Cute golden retriever puppies}
+%     \label{fig:dog}
+% \end{figure}
+
+% ---------------------------------------------------------------
+
+
+\section{Discussion} % Conclusions, Further research
+Your discussion
+
+% ---------------------------------------------------------------
+
+\section*{Acknowledgment}
+Your acknowledgement
+
+% ---------------------------------------------------------------
+
+
+\printbibliography[title=References]
+
+
+\clearpage
+\vspace{2cm}
+
+\authorblock{Fodor Máté}{email}
+\authorblock{Merk Eszter}{merkeszter@gmail.com}
+\authorblock{Vidó Bence}{email}
+\authorblock{Preszter Balázs}{email}
+
+\end{document}
