@@ -88,8 +88,23 @@ Taken together, this literature establishes both that TikTok-style algorithms ar
 
 \section{Methodology}
 
-\subsection{Methodology subsection}
-Your methodology
+\subsection{Research Design and System Mechanics}
+This study evaluates an anti-recommender system designated as the Not For You Page, engineered to minimize screen time and prompt voluntary user disengagement. The primary research question addresses how algorithmic filtering can reliably shorten user sessions without employing obvious attrition measures. Instead, the system targets standard social media content that is inherently underwhelming, uneventful, or lacking resolution, regardless of its production value or format.
+
+The recommendation engine parses a user's historical interaction data to identify primary interest vectors and systematically suppresses those topics. Concurrently, the algorithm samples various categories of unengaging media, evaluating how effectively each post accelerates session termination. Through continuous real-time feedback, the system refines its selection strategy to isolate which specific patterns of uneventful content trigger the fastest exits.
+
+\subsection{Participants and Experimental Setup}
+The system was evaluated with a sample of forty volunteers recruited through internal announcements. To qualify, participants were required to be at least eighteen years of age and active daily users of social media platforms. All individuals were informed that they were evaluating a novel feed interface, but they remained naive to the disengagement hypothesis to ensure their exit behavior reflected natural usage patterns.
+
+Testing was conducted in a quiet environment using a custom web application designed to replicate a standard mobile social media client. The software automatically logged interaction telemetry, including scroll velocity, item view duration, and precise timestamps for session initiation and termination. Participants accessed the feed on standardized mobile devices and were instructed to browse naturally until they chose to stop.
+
+\subsection{Procedure and Data Collection}
+Upon arrival, participants completed an initial profiling assessment to establish baseline content preferences across major media categories. They were then randomly assigned in a 1:1 ratio to either the control condition or the treatment condition. The control group received a standard recommendation feed optimized for content relevance and retention, while the treatment group received the Not For You Page feed.
+
+Data collection commenced upon the initial swipe and concluded when the participant explicitly closed the application interface. The primary outcome variable was total session duration, measured in seconds from feed entry to exit. Secondary metrics included average dwell time per post, total items viewed, and the frequency of rapid-skip interactions. Following session termination, participants completed a brief post-test questionnaire assessing their subjective motivation for exiting the application.
+
+\subsection{Data Analysis Plan}
+The primary analytical objective was to evaluate whether the Not For You Page produced a statistically significant reduction in total session duration relative to the control feed. Independent samples t-tests were used to compare mean session lengths and per-post view times between the two groups. Additionally, survival analysis using Kaplan-Meier estimates was applied to compare retention probability curves over time and evaluate overall disengagement velocity. Secondary interaction data was analyzed to determine which specific categories of underwhelming content generated the highest skip rates prior to session abandonment.
 
 % ---------------------------------------------------------------
 
