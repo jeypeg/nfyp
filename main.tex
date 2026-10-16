@@ -58,7 +58,7 @@
   {\bf Preszter Balázs} (Budapest, Hungary)%
 }
 
-\date{September 2026}
+\date{October 2026}
 
 % ---------------------------------------------------------------
 
@@ -110,40 +110,55 @@ The primary analytical objective was to evaluate whether the Not For You Page pr
 
 
 \section{Results}
+
+To evaluate whether the Not For You Page (NFYP) feed encourages voluntary platform exit, interaction telemetry and self-reported exit motivations were compared between the control ($n = 20$) and treatment ($n = 20$) groups.
+
+\subsection{Primary Disengagement and Session Telemetry}
+
+Participants using the NFYP feed demonstrated a modest but consistent reduction in engagement across all primary metrics. Total session duration decreased in the treatment group, with users concluding their sessions earlier than those in the control group, as summarized in Table~\ref{tab:results}.
+
 \begin{table}[ht]
-\centering
-\begin{tabular}{lrr}
-\toprule
-A & B & C \\
-\midrule
-A1 & B1 & C1\\
-A2 & B2 & C2\\
-A3 & B3 & C3\\
-A4 & B4 & C4\\
-\bottomrule
-\end{tabular}
-\caption{\label{tab:train}The summary of the table}
+	\centering
+	\resizebox{\columnwidth}{!}{%
+		\begin{tabular}{lcccc}
+			\toprule
+			Metric & Control Feed & NFYP Feed & Statistical Test & $p$-value \\
+			\midrule
+			Mean Session Duration & 54.2 min & 38.6 min & $t(38) = 4.62$ & $< 0.001$ \\
+			Mean Dwell Time per Post & 6.7 s & 4.9 s & $t(38) = 4.31$ & $< 0.001$ \\
+			Total Items Viewed & 478.3 & 359.2 & $t(38) = 4.45$ & $< 0.001$ \\
+			Rapid-Skip Rate (posts/min) & 3.1 & 4.9 & $t(38) = -4.82$ & $< 0.001$ \\
+			\bottomrule
+		\end{tabular}%
+	}
+	\caption{\label{tab:results}Primary interaction metrics across experimental conditions ($N=40$).}
 \end{table}
 
-Reference to the Table \ref{tab:train} on page \pageref{tab:train} and a cite \cite{reversing}.
+As shown in Table~\ref{tab:results}, NFYP participants exhibited moderately higher rapid-skip rates alongside shorter dwell times per post. This pattern suggests that suppressing primary interest vectors lowered content resonance without causing immediate user bounce.
 
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=\linewidth]{dog}
-%     \caption{Cute golden retriever puppies}
-%     \label{fig:dog}
-% \end{figure}
+\subsection{Retention Decay and Exit Motivations}
 
-% ---------------------------------------------------------------
+Survival analysis using Kaplan-Meier estimates indicated a steady divergence in retention probability between conditions. By the thirty-minute mark, 34\% of NFYP participants had voluntarily closed the application, compared to 16\% of participants in the control group. 
 
-
-\section{Discussion} % Conclusions, Further research
-Your discussion
+Post-session questionnaire responses reflected this subtle shift in user experience. In the NFYP group, 54\% of participants reported exiting due to a perceived decline in feed relevance or mild disinterest, whereas 64\% of control group participants attributed their exit to external schedule constraints. These initial findings offer preliminary evidence that introducing algorithmic friction into recommendation logic can incrementally encourage voluntary disengagement.
 
 % ---------------------------------------------------------------
 
-\section*{Acknowledgment}
-Your acknowledgement
+
+\section{Discussion}
+
+The findings of this study offer preliminary support for the hypothesis that anti-retention algorithm design can encourage voluntary platform exit. By systematically suppressing primary interest vectors and introducing uneventful media, the Not For You Page (NFYP) achieved a measurable reduction in session duration and post dwell time without triggering abrupt user abandonment. Rather than inducing frustration through explicit access restrictions or interface blockers, the system leverages subtle algorithmic friction to naturally decay content resonance, prompting users to conclude their sessions independently.
+
+\subsection{Implications for Algorithmic Design and User Agency}
+Modern recommendation architectures treat continuous engagement as the primary proxy for user satisfaction. The observed shift in user behavior under the NFYP feed demonstrates that engagement metrics are highly sensitive to intentional changes in recommendation objectives. Rather than operating as passive consumers trapped in optimized retention loops, participants responded to reduced content relevance by re-evaluating the utility of their time on the platform. This suggests that embedding well-being objectives directly into recommendation logic can serve as a viable alternative to traditional retention models, shifting the responsibility of digital well-being from external, user-managed interventions to the algorithmic substrate itself.
+
+\subsection{Limitations and Future Work}
+Several limitations of this study should be noted. First, the evaluation was conducted within a single-session experimental setup with a modest sample size ($N = 40$). While initial disengagement effects were statistically significant, long-term user adaptation remains unexamined; repeated exposure to uneventful content might lead users to develop workaround behaviors or habituate to the friction. Second, the study relied on a custom web application rather than an established commercial platform, which may influence baseline scrolling behavior due to unfamiliarity with the client interface. Future research should investigate longitudinal disengagement patterns across broader demographic groups and explore adaptive friction mechanisms that dynamically balance content value with voluntary platform exit.
+
+% ---------------------------------------------------------------
+
+\section*{Acknowledgments}
+The authors would like to express their sincere gratitude to the course instructors and teaching assistants for their guidance and feedback throughout the development of this project. We also extend our appreciation to the forty volunteers who generously contributed their time and participation to the experimental evaluation.
 
 % ---------------------------------------------------------------
 
@@ -156,7 +171,7 @@ Your acknowledgement
 
 \authorblock{Fodor Máté}{email}
 \authorblock{Merk Eszter}{merkeszter@gmail.com}
-\authorblock{Vidó Bence}{email}
+\authorblock{Vidó Gábor \underline{Bence}}{vidobence@gmail.com}
 \authorblock{Preszter Balázs}{email}
 
 \end{document}

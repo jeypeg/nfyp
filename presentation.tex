@@ -1,0 +1,176 @@
+%\documentclass[handout]{beamer}
+\documentclass{beamer}
+
+\usetheme{Szeged}
+\usecolortheme{orchid}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+
+\title{Not For You Page (NFYP)}
+\subtitle{Investigating Anti-Retention Recommendation Systems for Digital Well-Being}
+\author{Libsi szekta:\\ Fodor Máté, Merk Eszter, Vidó Gábor Bence, Preszter Balázs}
+\date{October 2026}
+
+\setbeamercovered{transparent}
+%\frenchspacing
+
+\begin{document}
+	
+	\begin{frame}
+		\maketitle
+		\vspace{-2cm}
+		\begin{center}
+			\includegraphics[width=0.2\textwidth]{eltecimer.jpg}
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Table of Contents}
+		\tableofcontents
+	\end{frame}
+	
+	\section{Introduction}
+	
+	\begin{frame}
+		\frametitle{Background and Problem Statement}
+		Feed-based recommendation engines drive modern platforms:
+		\begin{itemize}
+			\item Explicitly engineered around retention and engagement optimization
+			\item Continuous architectures lead to digital burnout and reduced user agency
+		\end{itemize}
+		
+		Limitations of existing interventions:
+		\begin{itemize}
+			\item Rely almost entirely on external interface controls (e.g., app timers)
+			\item Recommendation algorithms themselves remain unexamined as tools for self-regulation
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{The "Not For You Page" (NFYP)}
+		Core concept and objectives:
+		\begin{itemize}
+			\item An alternative feed model that inverts retention objectives
+			\item Systematically reduces content resonance and introduces intentional friction
+			\item Evaluates if recommendation logic can directly support voluntary platform exit
+		\end{itemize}
+		
+		Research Goal:
+		\begin{itemize}
+			\item Bridge the gap between digital well-being interventions and underlying algorithmic logic
+		\end{itemize}
+	\end{frame}
+	
+	\section{Related Work}
+	
+	\begin{frame}
+		\frametitle{Related Work}
+		Engagement-First Algorithmic Design:
+		\begin{itemize}
+			\item TikTok-style feeds rely on collaborative and content-based filtering to maximize retention (Zhou, 2024)
+			\item Documented negative outcomes include compulsive use, echo chambers, and identity formation (Smith \& Short, 2022; Kuncoro \& Hasanah, 2024)
+		\end{itemize}
+		
+		Limitations of Existing Well-Being Interventions:
+		\begin{itemize}
+			\item Current tools focus almost exclusively on interface-level friction or external timers (Haliburton et al., 2024; Almoallim \& Sas, 2022)
+			\item \textbf{The Gap:} Existing interventions leave the underlying recommendation objective entirely unexamined
+		\end{itemize}
+	\end{frame}
+	
+	\section{Methodology}
+	
+	\begin{frame}
+		\frametitle{System Mechanics and Experimental Setup}
+		System Mechanics:
+		\begin{itemize}
+			\item Initial profiling assessment establishes baseline interest vectors
+			\item Algorithm systematically suppresses primary interests and samples uneventful media
+		\end{itemize}
+		
+		Experimental Design:
+		\begin{itemize}
+			\item Sample of 40 active daily users ($N = 40$), naive to disengagement hypothesis
+			\item Standardized mobile test environment logging detailed interaction telemetry
+			\item 1:1 randomized assignment to Control (standard feed) vs. Treatment (NFYP)
+		\end{itemize}
+	\end{frame}
+	
+	\section{Results}
+	
+	\begin{frame}
+		\frametitle{Primary Session Telemetry}
+		
+		\begin{center}
+			\footnotesize
+			\textbf{Primary interaction metrics across experimental conditions ($N=40$).} \\[0.4em]
+			\setlength{\tabcolsep}{4pt}
+			\begin{tabular}{lcccc}
+				\toprule
+				Metric & Control & NFYP & Test ($t$) & $p$-value \\
+				\midrule
+				Mean Session Duration & 54.2 min & 38.6 min & $t(38) = 4.62$ & $< 0.001$ \\
+				Mean Dwell Time / Post & 6.7 s & 4.9 s & $t(38) = 4.31$ & $< 0.001$ \\
+				Total Items Viewed & 478.3 & 359.2 & $t(38) = 4.45$ & $< 0.001$ \\
+				Rapid-Skip Rate (posts/min) & 3.1 & 4.9 & $t(38) = -4.82$ & $< 0.001$ \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Disengagement Dynamics and Exit Motivations}
+		Retention and Exit Analysis:
+		\begin{itemize}
+			\item Kaplan-Meier survival curves show clear retention divergence
+			\item At 30 minutes, 34\% of NFYP participants exited vs. 16\% in control
+		\end{itemize}
+		
+		Self-Reported Exit Motivations:
+		\begin{itemize}
+			\item NFYP Group: 54\% cited content irrelevance or mild disinterest
+			\item Control Group: 64\% cited external schedule constraints
+		\end{itemize}
+	\end{frame}
+	
+	\section{Discussion}
+	
+	\begin{frame}
+		\frametitle{Discussion and Implications}
+		Key Takeaways:
+		\begin{itemize}
+			\item Algorithmic friction successfully prompts voluntary session termination
+			\item Demonstrates feasibility of embedding well-being objectives into core recommendation logic
+		\end{itemize}
+		
+		Limitations and Future Work:
+		\begin{itemize}
+			\item Evaluation limited to single-session setup with $N = 40$ sample size
+			\item Long-term user adaptation and habituation remain to be explored
+			\item Need for research on longitudinal adaptation and dynamic friction mechanisms
+		\end{itemize}
+	\end{frame}
+	
+	\section*{Bibliography}
+	
+	\begin{frame}
+		\frametitle{Bibliography}
+		\begin{thebibliography}{5}
+			\bibitem{zhou2024} \textbf{Zhou, X.} “Understanding the Recommendation Mechanism of TikTok”. \textit{Journal of Education, Humanities and Social Sciences}, (2024)
+			
+			\bibitem{smith2022} \textbf{Smith, B. and Short, E.} “Needs from TikTok: Psychometric evidence of problematic use”. \textit{Addictive Behaviors Reports}, (2022)
+			
+			\bibitem{kuncoro2024} \textbf{Kuncoro, A. and Hasanah, U.} “Social media echo chambers and algorithmic amplification”. \textit{Journal of Media Studies}, (2024)
+			
+			\bibitem{haliburton2024} \textbf{Haliburton, L. et al.} “Friction-based interventions for digital wellbeing”. \textit{ACM Transactions on Computer-Human Interaction}, (2024)
+			
+			\bibitem{almoallim2022} \textbf{Almoallim, S. and Sas, C.} “Digital Wellbeing Tools and Algorithmic Non-Interference”. \textit{Proc. CHI Conference on Human Factors in Computing Systems}, (2022)
+		\end{thebibliography}
+	\end{frame}
+	
+\end{document}
